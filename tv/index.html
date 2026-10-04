@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Izuki for Android TV & Fire TV — free download</title>
+  <meta name="description" content="Put Izuki on your Android TV, Google TV or Fire TV for free: install the Downloader app, type nova-izuki.github.io/tv, and install." />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="canonical" href="https://nova-izuki.github.io/tv/" />
+  <style>
+    body { margin: 0; min-height: 100vh; background: #04050c; color: #eef0ff; font: 18px/1.6 system-ui, "Segoe UI", sans-serif; display: grid; place-items: center; }
+    main { max-width: 760px; padding: 32px; }
+    h1 { font-size: 40px; margin: 12px 0 6px; }
+    ol { padding-left: 1.2em; } li { margin: 10px 0; }
+    code { background: #142033; color: #67e8f9; padding: 2px 8px; border-radius: 8px; }
+    a.btn { display: inline-block; margin-top: 18px; padding: 14px 26px; border-radius: 999px; background: linear-gradient(120deg, #67e8f9, #a78bfa 55%, #f0abfc); color: #06060f; font-weight: 800; text-decoration: none; }
+    a:focus-visible { outline: 4px solid #67e8f9; outline-offset: 4px; }
+    small { color: #8a90b3; }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="/icon-192.png" width="72" height="72" alt="Izuki logo" />
+    <h1>Izuki on your TV</h1>
+    <p>Free for Android TV, Google TV and Fire TV.</p>
+    <ol>
+      <li>On the TV, open the app store and install the free <b>Downloader</b> app (by AFTVnews).</li>
+      <li>Open Downloader and type <code>nova-izuki.github.io/tv</code></li>
+      <li>Izuki downloads — press <b>Install</b> (allow Downloader to install apps if the TV asks), then open Izuki from your home screen.</li>
+    </ol>
+    <a class="btn" id="get" href="https://github.com/nova-izuki/izuki/releases/latest/download/Izuki-Companion-Android-preview.apk">⬇ Download Izuki for TV</a>
+    <p><small>Roku, Samsung or LG? Izuki on your PC or phone controls those over Wi-Fi — say “open Netflix on the TV”. <a href="/izuki/" style="color:#67e8f9">Get Izuki</a></small></p>
+  </main>
+  <script>
+    // On a TV (typed into Downloader), start the download right away.
+    if (/\b(Android TV|GoogleTV|Google TV|AFT[A-Z]|BRAVIA)\b/i.test(navigator.userAgent) || matchMedia("(pointer: none)").matches) {
+      setTimeout(function () { location.href = document.getElementById("get").href; }, 600);
+    }
+  </script>
+</body>
+</html>
