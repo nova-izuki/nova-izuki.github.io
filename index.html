@@ -10,11 +10,41 @@
   <link rel="icon" type="image/png" href="/icon-96.png" sizes="96x96" />
   <link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192" />
   <link rel="apple-touch-icon" href="/icon-192.png" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:site_name" content="Izuki" />
+  <meta property="og:url" content="https://nova-izuki.github.io/izuki/" />
   <meta property="og:title" content="Izuki — the AI that lives on your screen" />
   <meta property="og:image" content="https://nova-izuki.github.io/izuki/og.png" />
   <meta http-equiv="refresh" content="0; url=/izuki/" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Izuki","alternateName":"Nova Izuki","url":"https://nova-izuki.github.io/izuki/","logo":"https://nova-izuki.github.io/icon-512.png"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://nova-izuki.github.io/#website",
+      "name": "Izuki",
+      "alternateName": [
+        "Nova Izuki",
+        "Izuki AI",
+        "nova-izuki.github.io"
+      ],
+      "url": "https://nova-izuki.github.io/",
+      "publisher": {
+        "@id": "https://nova-izuki.github.io/izuki/#org"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Izuki",
+      "alternateName": "Nova Izuki",
+      "url": "https://nova-izuki.github.io/izuki/",
+      "logo": "https://nova-izuki.github.io/icon-512.png",
+      "@id": "https://nova-izuki.github.io/izuki/#org"
+    }
+  ]
+}
   </script>
   <style>
     body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #04050c; color: #eef0ff; font: 16px system-ui, sans-serif; }
