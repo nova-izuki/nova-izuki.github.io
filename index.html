@@ -4,18 +4,27 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Izuki (Nova Izuki) — Free AI Assistant for Windows</title>
-  <meta name="description" content="Izuki (Nova Izuki) is a free AI assistant for Windows. Say “Hey Nova” — it sees your screen, answers out loud and does the work." />
-  <link rel="canonical" href="https://nova-izuki.github.io/izuki/" />
+  <meta name="description" content="Izuki (Nova Izuki) is a free AI assistant for Windows. Say “Hey Nova” — it sees your screen, answers out loud and does the work, on your PC and from your phone." />
+  <!-- This is the site's home page: Google takes the site name and the
+       icon beside every result from here, so it is canonical to itself and
+       does not redirect. -->
+  <link rel="canonical" href="https://nova-izuki.github.io/" />
   <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" href="/icon-48.png" sizes="48x48" />
   <link rel="icon" type="image/png" href="/icon-96.png" sizes="96x96" />
   <link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192" />
   <link rel="apple-touch-icon" href="/icon-192.png" />
+  <meta name="theme-color" content="#04050c" />
+  <meta name="application-name" content="Izuki" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Izuki" />
-  <meta property="og:url" content="https://nova-izuki.github.io/izuki/" />
+  <meta property="og:url" content="https://nova-izuki.github.io/" />
   <meta property="og:title" content="Izuki — the AI that lives on your screen" />
+  <meta property="og:description" content="Say “Hey Nova”. It sees your screen, answers out loud, and does the work. Free." />
   <meta property="og:image" content="https://nova-izuki.github.io/izuki/og.png" />
-  <meta http-equiv="refresh" content="0; url=/izuki/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://nova-izuki.github.io/izuki/og.png" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -24,39 +33,56 @@
       "@type": "WebSite",
       "@id": "https://nova-izuki.github.io/#website",
       "name": "Izuki",
-      "alternateName": [
-        "Nova Izuki",
-        "Izuki AI",
-        "nova-izuki.github.io"
-      ],
+      "alternateName": ["Nova Izuki", "Izuki AI"],
       "url": "https://nova-izuki.github.io/",
-      "publisher": {
-        "@id": "https://nova-izuki.github.io/izuki/#org"
-      }
+      "publisher": { "@id": "https://nova-izuki.github.io/izuki/#org" }
     },
     {
-      "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://nova-izuki.github.io/izuki/#org",
       "name": "Izuki",
       "alternateName": "Nova Izuki",
-      "url": "https://nova-izuki.github.io/izuki/",
-      "logo": "https://nova-izuki.github.io/icon-512.png",
-      "@id": "https://nova-izuki.github.io/izuki/#org"
+      "url": "https://nova-izuki.github.io/",
+      "logo": "https://nova-izuki.github.io/icon-512.png"
     }
   ]
 }
   </script>
   <style>
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #04050c; color: #eef0ff; font: 16px system-ui, sans-serif; }
-    a { color: #67e8f9; }
+    :root { --bg: #04050c; --ink: #eef0ff; --muted: #a9afcf; --line: rgba(255,255,255,.1); }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: radial-gradient(1200px 600px at 50% -10%, rgba(139,92,246,.22), transparent 60%), var(--bg); color: var(--ink); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 1040px; margin: 0 auto; padding: 56px 16px 64px; text-align: center; }
+    .logo { width: 96px; height: 96px; border-radius: 24px; box-shadow: 0 0 60px rgba(167,139,250,.45); }
+    h1 { font-size: clamp(40px, 8vw, 72px); line-height: 1; margin: 18px 0 8px; letter-spacing: -.03em; }
+    .lede { color: var(--muted); font-size: 18px; max-width: 560px; margin: 0 auto 26px; }
+    .go { display: inline-block; padding: 14px 26px; border-radius: 999px; color: #04050c; font-weight: 700; text-decoration: none; background: linear-gradient(135deg, #67e8f9, #a78bfa 55%, #f0abfc); }
+    .go:hover { filter: brightness(1.08); }
+    .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 44px; }
+    figure { margin: 0; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: rgba(255,255,255,.03); }
+    figure img { display: block; width: 100%; height: auto; }
+    figcaption { padding: 10px 12px; font-size: 13.5px; color: var(--muted); text-align: left; }
+    footer { margin-top: 40px; font-size: 13px; color: var(--muted); }
+    footer a, .lede a { color: #67e8f9; }
   </style>
 </head>
 <body>
-  <main style="text-align:center">
-    <img src="/icon-192.png" width="96" height="96" alt="Izuki logo" />
+  <main>
+    <img class="logo" src="/icon-192.png" width="96" height="96" alt="Izuki logo" />
     <h1>Izuki</h1>
-    <p>The free AI that lives on your screen. <a href="/izuki/">Go to Izuki →</a></p>
+    <p class="lede">The free AI that lives on your screen. Say “Hey Nova”, talk naturally, and Izuki sees your screen, answers out loud, and clicks, types and draws to get things done.</p>
+    <a class="go" href="/izuki/">Get Izuki — free for Windows</a>
+
+    <section class="shots" aria-label="Izuki screenshots">
+      <figure><a href="/izuki/screenshots/"><img src="/izuki/shots/panel-draw.jpg" loading="lazy" alt="Izuki app on Windows: the Draw page, where you draw on your screen and tell Izuki what to do" /></a><figcaption>Draw on your screen and tell it what to do</figcaption></figure>
+      <figure><a href="/izuki/screenshots/"><img src="/izuki/shots/panel-chat.jpg" loading="lazy" alt="Izuki app on Windows: the Chat page with an AI conversation that can use your PC" /></a><figcaption>Chat that actually uses your PC</figcaption></figure>
+      <figure><a href="/izuki/screenshots/"><img src="/izuki/shots/phone-call.jpg" loading="lazy" alt="Izuki on a phone: a voice call with the Izuki orb controlling the PC from the phone" /></a><figcaption>Call your PC from your phone</figcaption></figure>
+      <figure><a href="/izuki/screenshots/"><img src="/izuki/shots/panel-settings.jpg" loading="lazy" alt="Izuki app on Windows: Settings with voices, characters, PC Boost and free AI models" /></a><figcaption>Voices, characters and free AI</figcaption></figure>
+    </section>
+
+    <footer>
+      <a href="/izuki/">Website</a> · <a href="/izuki/app/">Phone app</a> · <a href="/tv/">TV</a> · <a href="https://github.com/nova-izuki/izuki">Open source on GitHub</a>
+    </footer>
   </main>
-  <script>location.replace("/izuki/" + location.search + location.hash);</script>
 </body>
 </html>
